@@ -23,6 +23,9 @@ public class Fire_Behaviour : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
+        else if(collision.gameObject.tag == "Respawn"){
+            collision.transform.position += new Vector3(transform.position.x, 9);
+        }
 
     }
 }
