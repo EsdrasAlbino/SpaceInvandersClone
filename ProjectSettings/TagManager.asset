@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enimy
   - Fire
+  - FirePlayer
   layers:
   - Default
   - TransparentFX

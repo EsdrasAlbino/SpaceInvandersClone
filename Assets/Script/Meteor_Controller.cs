@@ -12,10 +12,12 @@ public class Meteor_Controller : MonoBehaviour
     public int meteorSpawn;
     private int ident;
     public GameObject[] meteorAll;
+
     //public GameObject meteorScene;
 
     void Start()
     {
+        
         InvokeRepeating("MeteorRandom", 5f, 8f);
     }
 
@@ -30,23 +32,13 @@ public class Meteor_Controller : MonoBehaviour
        }
     }
 
-    //Enime 1
-
-
-    //Enime 2
     void MeteorRandom(){
-
+        
         randomTimeSpawn = Random.Range(8,20);
         meteorSpawn = Random.Range(0,4);
         Instantiate( meteorAll[meteorSpawn], new Vector3(Random.Range(-8,8),Random.Range(7,12)), Quaternion.identity);
+        
     }
-    
-    IEnumerator TimeSpawnEnemy(){
-        while(true){
-            yield return new WaitForSeconds(2);
-            MeteorRandom();
-        }
-    }
-
-
 }
+    
+

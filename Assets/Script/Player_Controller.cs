@@ -9,7 +9,6 @@ public class Player_Controller : MonoBehaviour
     public float lives = 5;
 
     public GameObject fire;
-
     float horizontalMove;
 
     void Start()
